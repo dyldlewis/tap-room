@@ -8,6 +8,7 @@ import { Keg } from './keg.model';
 })
 export class AppComponent {
   title = 'Suds Watering Hole';
+  selectedKeg = null;
   masterKegList: Keg[] = [
     new Keg('Lagunitas', 'IPA', 5.75, 6.2),
     new Keg('Red Seal', 'Lager', 5.00, 4.1),
@@ -17,5 +18,13 @@ export class AppComponent {
 
   addKeg(newKegFromChild: Keg) {
     this.masterKegList.push(newKegFromChild);
+  }
+
+  editKeg(clickedKeg){
+    this.selectedKeg = clickedKeg;
+  }
+
+  finishedEditing(){
+    this.selectedKeg = null;
   }
 }

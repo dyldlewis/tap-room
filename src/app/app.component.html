@@ -1,5 +1,9 @@
 <h1>Young Dylan's Berr Drinkin' Spot</h1>
 
 <h3>Available Kegs</h3>
-<app-keg-list [childKegList]="masterKegList"></app-keg-list>
+
+<app-keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+
 <app-new-keg (newKegSender)="addKeg($event)"></app-new-keg>
+
+<app-edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></app-edit-keg>
