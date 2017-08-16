@@ -7,7 +7,6 @@ import { Keg } from './keg.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Suds Watering Hole';
   selectedKeg = null;
   masterKegList: Keg[] = [
     new Keg('Lagunitas', 'IPA', 5.75, 6.2),
@@ -31,7 +30,7 @@ export class AppComponent {
   sellPint(clickedKeg){
     clickedKeg.pints -= 1;
     if(clickedKeg.pints <= 10){
-      clickedKeg.color = "bg-danger"
+      clickedKeg.color = "bg-danger";
     }
   }
 }

@@ -19,6 +19,16 @@ export class KegListComponent implements OnInit {
     this.pintClickSender.emit(kegToSellFrom);
   }
 
+  priceColor(currentKeg){
+    if(currentKeg.price <= 4){
+      return "bg-success";
+    } else if (currentKeg.price >=4 && currentKeg.price <=6){
+        return "bg-warning";
+    } else {
+      return "bg-info";
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {

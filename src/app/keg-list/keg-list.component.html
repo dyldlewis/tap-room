@@ -1,9 +1,9 @@
-<ul *ngFor="let currentKeg of childKegList" class="{{currentKeg.color}}">
+<ul *ngFor="let currentKeg of childKegList" >
   <li><h3>{{currentKeg.brand}}</h3></li>
   <li>Name: {{currentKeg.name}}</li>
-  <li>Price: ${{currentKeg.price}}</li>
-  <li>Alcohol content: {{currentKeg.alcContent}}%</li>
+  <li [class]="priceColor(currentKeg)">Price: ${{currentKeg.price}}</li>
+  <li>Alcohol Content: {{currentKeg.alcContent}}%</li>
   <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button>
   <button (click)="pintButtonHasBeenClicked(currentKeg)">Sell Pint</button>
-  <span>(There are {{currentKeg.pints}} pints remaining.)</span>
+  <span class="{{currentKeg.color}}">(There are {{currentKeg.pints}} pints remaining.)</span>
 </ul>
