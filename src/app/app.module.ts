@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { KegListComponent } from './keg-list/keg-list.component';
 import { NewKegComponent } from './new-keg/new-keg.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
+import { PotencyPipe } from './potency.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     KegListComponent,
     NewKegComponent,
-    EditKegComponent
+    EditKegComponent,
+    PotencyPipe
   ],
   imports: [
     BrowserModule,

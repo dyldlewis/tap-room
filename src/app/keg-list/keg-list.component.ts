@@ -7,6 +7,7 @@ import { Keg } from '../keg.model';
   styleUrls: ['./keg-list.component.css']
 })
 export class KegListComponent implements OnInit {
+  filterByPotency: string = "allBeers";
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
   @Output() pintClickSender = new EventEmitter();
@@ -17,6 +18,10 @@ export class KegListComponent implements OnInit {
 
   pintButtonHasBeenClicked(kegToSellFrom: Keg){
     this.pintClickSender.emit(kegToSellFrom);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByPotency = optionFromMenu;
   }
 
   priceColor(currentKeg){

@@ -1,4 +1,11 @@
-<ul *ngFor="let currentKeg of childKegList" >
+<select (change)="onChange($event.target.value)">
+  <option value="allBeers" selected="selected">All Beers</option>
+  <option value="strongBeer">Strong Beers</option>
+  <option value="mediumBeer">Medium Beers</option>
+  <option value="lightBeer">Light Beers</option>
+</select>
+
+<ul *ngFor="let currentKeg of childKegList | potency:filterByPotency" >
   <li><h3>{{currentKeg.brand}}</h3></li>
   <li>Name: {{currentKeg.name}}</li>
   <li [class]="priceColor(currentKeg)">Price: ${{currentKeg.price}}</li>
