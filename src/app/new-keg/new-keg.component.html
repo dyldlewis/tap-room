@@ -1,0 +1,20 @@
+<h1>Add Keg</h1>
+<div>
+  <label>Keg Name</label>
+  <input #newName>
+</div>
+<div>
+  <label>Keg Brand</label>
+  <input #newBrand>
+</div>
+<div>
+  <label>Keg Price</label>
+  <input type="number" #newPrice>
+</div>
+<div>
+  <label>Keg Alcohol Content</label>
+  <input type="number" #newAlcContent>
+</div>
+<div>
+<button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcContent.value)">Add</button>
+</div>

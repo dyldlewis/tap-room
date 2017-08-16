@@ -2,3 +2,4 @@
 
 <h3>Available Kegs</h3>
 <app-keg-list [childKegList]="masterKegList"></app-keg-list>
+<app-new-keg (newKegSender)="addKeg($event)"></app-new-keg>

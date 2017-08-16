@@ -9,9 +9,13 @@ import { Keg } from './keg.model';
 export class AppComponent {
   title = 'Suds Watering Hole';
   masterKegList: Keg[] = [
-    new Keg('Lagunitas', 'IPA', 5, 6),
-    new Keg('Red Seal', 'Lager', 5, 4),
-    new Keg('Equinox', 'Stout', 5, 5),
-    new Keg('Coors', 'Banquet', 3, 4),
+    new Keg('Lagunitas', 'IPA', 5.75, 6.2),
+    new Keg('Red Seal', 'Lager', 5.00, 4.1),
+    new Keg('Equinox', 'Stout', 5.75, 5.5),
+    new Keg('Coors', 'Banquet', 3.50, 4.0),
   ];
+
+  addKeg(newKegFromChild: Keg) {
+    this.masterKegList.push(newKegFromChild);
+  }
 }

@@ -1,3 +1,6 @@
-<ul>
-  <li *ngFor="let currentKeg of childKegList">{{currentKeg.brand}}</li>
+<ul *ngFor="let currentKeg of childKegList">
+  <li><h3>{{currentKeg.brand}}</h3></li>
+  <li>Name: {{currentKeg.name}}</li>
+  <li>Price: ${{currentKeg.price}}</li>
+  <li>Alcohol content: {{currentKeg.alcContent}}%</li>
 </ul>
