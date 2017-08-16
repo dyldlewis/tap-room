@@ -4,4 +4,6 @@
   <li>Price: ${{currentKeg.price}}</li>
   <li>Alcohol content: {{currentKeg.alcContent}}%</li>
   <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button>
+  <button (click)="pintButtonHasBeenClicked(currentKeg)">Sell Pint</button>
+  <span>(There are {{currentKeg.pints}} pints remaining.)</span>
 </ul>

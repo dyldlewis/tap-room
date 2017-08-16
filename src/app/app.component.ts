@@ -27,4 +27,8 @@ export class AppComponent {
   finishedEditing(){
     this.selectedKeg = null;
   }
+
+  sellPint(clickedKeg){
+    clickedKeg.pints -= 1;
+  }
 }
