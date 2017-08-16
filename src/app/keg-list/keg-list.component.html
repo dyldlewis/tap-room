@@ -1,4 +1,4 @@
-<ul *ngFor="let currentKeg of childKegList">
+<ul *ngFor="let currentKeg of childKegList" class="{{currentKeg.color}}">
   <li><h3>{{currentKeg.brand}}</h3></li>
   <li>Name: {{currentKeg.name}}</li>
   <li>Price: ${{currentKeg.price}}</li>
