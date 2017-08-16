@@ -16,5 +16,5 @@
   <input type="number" #newAlcContent>
 </div>
 <div>
-<button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcContent.value)">Add</button>
+<button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcContent.value); newName.value=''; newBrand.value=''; newPrice.value=0; newAlcContent.value=0;">Add</button>
 </div>
