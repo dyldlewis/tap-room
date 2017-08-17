@@ -6,6 +6,7 @@
 .container {
   font-family: bookman;
   background-color: black;
+  justify-content: center;
 }
 
 li {
