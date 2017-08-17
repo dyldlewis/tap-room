@@ -1,20 +1,22 @@
-<h1>Add Keg</h1>
-<div>
-  <label>Keg Name</label>
-  <input #newName>
-</div>
-<div>
-  <label>Keg Brand</label>
-  <input #newBrand>
-</div>
-<div>
-  <label>Keg Price</label>
-  <input type="number" #newPrice>
-</div>
-<div>
-  <label>Keg Alcohol Content</label>
-  <input type="number" #newAlcContent>
-</div>
-<div>
-<button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcContent.value); newName.value=''; newBrand.value=''; newPrice.value=0; newAlcContent.value=0;">Add</button>
+<div class="well">
+  <h1>Add Keg</h1>
+  <div>
+    <input #newBrand>
+    <label>Brand</label>
+  </div>
+  <div>
+    <input #newName>
+    <label>Style</label>
+  </div>
+  <div>
+    <input type="number" #newPrice>
+    <label>Pint Price</label>
+  </div>
+  <div>
+    <input type="number" #newAlcContent>
+    <label>Alcohol Content</label>
+  </div>
+  <div>
+  <button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcContent.value); newName.value=''; newBrand.value=''; newPrice.value=0; newAlcContent.value=0;">Add</button>
+  </div>
 </div>

@@ -2,3 +2,19 @@
 .soldOut{
   color: red;
 }
+
+.container {
+  font-family: bookman;
+  background-color: black;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.background {
+}
