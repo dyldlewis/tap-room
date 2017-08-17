@@ -26,11 +26,11 @@ export class KegListComponent implements OnInit {
 
   priceColor(currentKeg){
     if(currentKeg.price <= 4){
-      return "bg-success";
+      return "blue";
     } else if (currentKeg.price >=4 && currentKeg.price <=6){
-        return "bg-warning";
+        return "red";
     } else {
-      return "bg-info";
+      return "green";
     }
   }
 

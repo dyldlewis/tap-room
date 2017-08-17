@@ -16,5 +16,32 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
 .background {
+  background-color: grey;
+}
+
+.box {
+  background-color: grey;
+  border-style: solid;
+  border-width: thick;;
+  border-color: black;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-right: 5%;
+}
+
+.blue {
+  background-color: lightyellow;
+}
+
+.red {
+  background-color: tan;
+}
+
+.green {
+  background-color: lightgrey;
 }

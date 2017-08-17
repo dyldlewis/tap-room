@@ -4,19 +4,21 @@
 
 <div class="well">
   <h1>Available Kegs</h1>
-  <select (change)="onChange($event.target.value)">
+  <select class="drop" (change)="onChange($event.target.value)">
     <option value="allBeers" selected="selected">All Beers</option>
     <option value="strongBeer">Strong Beers</option>
     <option value="mediumBeer">Medium Beers</option>
     <option value="lightBeer">Light Beers</option>
-  </select><p>Filter By Alcohol Content</p>
-  <ul *ngFor="let currentKeg of childKegList | potency:filterByPotency" >
-    <li><h3>{{currentKeg.brand}}<span *ngIf="currentKeg.soldOut" class="soldOut">SOLD OUT!</span></h3></li>
-    <li>{{currentKeg.name}}</li>
-    <li [class]="priceColor(currentKeg)">${{currentKeg.price}}</li>
-    <li>{{currentKeg.alcContent}}%</li>
-    <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button>
-    <button (click)="pintButtonHasBeenClicked(currentKeg)">Sell Pint</button>
-    <span class="{{currentKeg.color}}">{{currentKeg.pints}} pints remaining.</span>
+  </select><h5>Filter By Alcohol Content</h5>
+  <ul *ngFor="let currentKeg of childKegList | potency:filterByPotency">
+    <div class="box">
+      <li><h2>{{currentKeg.brand}}<span *ngIf="currentKeg.soldOut" class="soldOut">SOLD OUT!</span></h2></li>
+      <li><h4>{{currentKeg.name}}</h4></li>
+      <li><h4><span [class]="priceColor(currentKeg)">${{currentKeg.price}}</span></h4></li>
+      <li><h4>{{currentKeg.alcContent}}%</h4></li>
+      <button (click)="editButtonHasBeenClicked(currentKeg)">Edit</button>
+      <button (click)="pintButtonHasBeenClicked(currentKeg)">Sell Pint</button>
+      <span class="{{currentKeg.color}}">{{currentKeg.pints}} pints remaining.</span>
+    </div>
   </ul>
 </div>
