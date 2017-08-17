@@ -6,7 +6,7 @@
 </select>
 
 <ul *ngFor="let currentKeg of childKegList | potency:filterByPotency" >
-  <li><h3>{{currentKeg.brand}}</h3></li>
+  <li><h3>{{currentKeg.brand}}<span *ngIf="currentKeg.soldOut" class="soldOut">SOLD OUT!</span></h3></li>
   <li>Name: {{currentKeg.name}}</li>
   <li [class]="priceColor(currentKeg)">Price: ${{currentKeg.price}}</li>
   <li>Alcohol Content: {{currentKeg.alcContent}}%</li>

@@ -29,7 +29,9 @@ export class AppComponent {
 
   sellPint(clickedKeg){
     clickedKeg.pints -= 1;
-    if(clickedKeg.pints <= 10){
+    if(clickedKeg.pints === 0) {
+      clickedKeg.soldOut = true;
+    } else if (clickedKeg.pints <= 10) {
       clickedKeg.color = "bg-danger";
     }
   }
